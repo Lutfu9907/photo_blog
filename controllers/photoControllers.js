@@ -30,6 +30,7 @@ exports.getPhoto = async (req, res) => {
   });
 };
 
+
 exports.createPhoto = async (req, res) => {
   const uploadDir = 'public/uploads';
 
