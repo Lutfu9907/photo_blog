@@ -9,10 +9,9 @@ const pageController = require('./controllers/pageController');
 const app = express();
 mongoose.connect('mongodb://localhost/pcat-test-db');
 
-//template engine -->ejs(embedded javaScript)
+
 app.set('view engine', 'ejs');
 
-//middleware req-res arasında bulunan durumlar.
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -23,7 +22,6 @@ app.use(
   })
 );
 
-//Routes
 app.get('/', photoController.getAllPhotos);
 app.get('/photos/:id', photoController.getPhoto);
 app.post('/photos', photoController.createPhoto);

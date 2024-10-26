@@ -15,12 +15,6 @@ exports.getAllPhotos = async (req, res) => {
     current: page,
     pages: Math.ceil(totalPhotos / photosPerPage),
   });
-
-  //  console.log(req.query);
-  //   const photos = await Photo.find({}).sort('-dateCreated');
-  //   res.render('index', {
-  //     photos,
-  //   });
 };
 
 exports.getPhoto = async (req, res) => {
@@ -29,7 +23,6 @@ exports.getPhoto = async (req, res) => {
     photo,
   });
 };
-
 
 exports.createPhoto = async (req, res) => {
   const uploadDir = 'public/uploads';
